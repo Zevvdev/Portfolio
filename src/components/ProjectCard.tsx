@@ -22,7 +22,42 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             )}
 
             <h3 className="project-title">{title}</h3>
-            <p>{description}</p>
+            
+            <p className="project-card">{description}</p>
+
+            {techStack && techStack.length > 0 && (
+                <div className="tech-stack">
+                    {techStack.map((tech, index) => (
+                        <span key={index} className="tech-tag">
+                            {tech}
+                        </span>
+                    ))}
+                </div>
+            )}
+            <div className="githubUrl">
+                {githubUrl && (
+                    <a href={githubUrl} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn github-link"
+                    >
+                        Github
+                    </a>
+                )}
+            </div>
+
+            <div className="demoUrl">
+                {demoUrl && (
+                    <a href={demoUrl} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn demo-link"
+                    >
+                        Demo
+                    </a>
+                )}
+            </div>
+
         </div>
     );
 
