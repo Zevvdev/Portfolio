@@ -11,3 +11,32 @@ export interface RootState {
     notiUnreadCount: number; // 안읽은 알림 수
     getNotiData: boolean; // 알림 데이터를 요청했는지 유무
  }
+
+// 사용자 정보 타입
+export interface UserInfo {
+    id: number;
+    username: string;
+    email: string;
+    roles: string[];
+    // 필요한 다른 사용자 정보 필드들...
+}
+
+// 공통코드 그룹 응답 타입
+export interface CommonCodeGroupResponse {
+    [groupCode: string]: CommonCode[];
+}
+
+// 공통코드 타입
+export interface CommonCode {
+    code: string;
+    name: string;
+    description?: string;
+}
+
+// 알림 응답 타입
+export interface responseNotificationsType {
+    id: number;
+    message: string;
+    isRead: boolean;
+    createdAt: string;
+}
