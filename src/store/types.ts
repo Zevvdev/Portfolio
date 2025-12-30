@@ -12,6 +12,7 @@ export interface RootState {
     getNotiData: boolean; // 알림 데이터를 요청했는지 유무
  }
 
+
 // 사용자 정보 타입
 export interface UserInfo {
     id: number;
