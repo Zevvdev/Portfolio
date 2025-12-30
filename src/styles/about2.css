@@ -1,0 +1,123 @@
+/* src/styles/about.css */
+
+.page-wrapper {
+    padding: 100px 0; /* 카드 제거 후 위아래 여백을 늘려 시원하게 배치 */
+    background-color: #ffffff; 
+    min-height: 100vh;
+}
+
+/* 왼쪽 프로필 섹션 */
+.profile-section {
+    position: sticky; /* 스크롤 시 프로필 고정 효과 (선택사항) */
+    top: 50px;
+}
+
+.profile-circle {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f8f9fa;
+    border: 1px solid #eee;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.profile-role {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.profile-info-list {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.profile-info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.profile-info-item .label {
+    font-weight: 600;
+    color: #888;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.profile-info-item .value {
+    color: #222;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* 오른쪽 콘텐츠 섹션 */
+.section-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.about-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+}
+
+.quote-box {
+    padding: 30px;
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+}
+
+/* 버튼 스타일 */
+.btn-custom {
+    padding: 10px 24px;
+    font-weight: 600;
+    border-radius: 50px; /* 둥근 버튼 */
+    transition: all 0.2s ease;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 반응형 모바일 */
+@media (max-width: 991.98px) {
+    .page-wrapper {
+        padding: 50px 0;
+    }
+    .profile-section {
+        position: relative;
+        top: 0;
+        margin-bottom: 50px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+}

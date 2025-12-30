@@ -1,0 +1,119 @@
+/* src/styles/about.css */
+
+.page-wrapper {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* 프로필 이미지 */
+.profile-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f8f9fa;
+    border: 5px solid #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 정보 리스트 */
+.profile-info-list {
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: left;
+    background: #fcfcfc;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+}
+
+.profile-info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 0.95rem;
+}
+
+.profile-info-item:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.profile-info-item .label {
+    font-weight: 600;
+    color: #888;
+}
+
+.profile-info-item .value {
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
+}
+
+/* 오른쪽 설명 영역 */
+.about-description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* 스킬 그리드 (반응형) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+/* 인용구 */
+.quote-box {
+    padding: 25px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 15px;
+    font-style: italic;
+    font-size: 1.1rem;
+    text-align: center;
+    position: relative;
+}
+
+/* 버튼 스타일 커스텀 */
+.btn {
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+    transform: translateY(-2px);
+}
+
+.btn-dark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 반응형 처리 */
+@media (max-width: 991.98px) {
+    .page-wrapper {
+        padding: 40px 0;
+    }
+    .profile-section {
+        margin-bottom: 2rem;
+    }
+    .btn-group-custom {
+        width: 100%;
+        margin-top: 1rem;
+        display: flex;
+    }
+    .btn-group-custom .btn {
+        flex: 1;
+    }
+}

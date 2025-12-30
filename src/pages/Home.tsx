@@ -1,16 +1,44 @@
 // src/pages/Home.tsx
 
-import ProjectCard from "../components/ProjectCard";
-import { projects } from "../data/projects";
+import { useNavigate } from "react-router-dom";
+import "../styles/home.css";
+
+
 
 
 function Home() {
+
+    const navigate = useNavigate();
+
     return <>
-        <div className="home">
-            {projects.map(project => (
-                <ProjectCard key={project.id} project={project} />
-            ))}
-        </div>
+        <section className="home">
+            <div className="home-content">
+                <div className="text-area">
+                    <h1>Back-End
+                        <br/>
+                        Developer
+                    </h1>
+
+                    <button 
+                        className="btn about-btn" onClick={() => navigate('/about')}>About</button>
+
+                    {/* SNS 아이콘 영역 */}
+                    <div className="social">
+                        <i className="fab fa-email"></i>
+                        <i className="fab fa-github"></i>
+                        <i className="fab fa-linkedin"></i>
+                    </div> 
+
+                    <div className="image-area">
+                        <div className="profile-circle">
+                            <img src="assets/img/profile.png" alt="Ji Eun Kim" className="profile-image"/>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+    
+
     
     </>
 }
