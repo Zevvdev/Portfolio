@@ -1,6 +1,8 @@
-// src/components/ProjectCard.tsx
+// src/features/portfolio/components/ProjectCard.tsx
 
-import type { Project } from "../data/projects";
+import type { Project } from "../types/projects";
+
+
 
 interface ProjectCardProps {
     project: Project;
@@ -27,7 +29,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
             {techStack && techStack.length > 0 && (
                 <div className="tech-stack">
-                    {techStack.map((tech, index) => (
+                    {techStack.map((tech: string, index: number) => (
                         <span key={index} className="tech-tag">
                             {tech}
                         </span>
