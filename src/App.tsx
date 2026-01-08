@@ -1,7 +1,7 @@
 // src/App.tsx
 
 import './App.css'
-import Sidebar from './components/Sidebar'
+import Sidebar from './global/components/Sidebar'
 import { useOutlet } from 'react-router-dom'
 
 function App() {

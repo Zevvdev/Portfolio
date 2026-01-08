@@ -1,0 +1,30 @@
+/* src/styles/mandalart.css */
+
+.ritz .waffle a { color: inherit; }
+.ritz .waffle .s0, .ritz .waffle .s1, .ritz .waffle .s2, 
+.ritz .waffle .s3, .ritz .waffle .s4, .ritz .waffle .s5, 
+.ritz .waffle .s6, .ritz .waffle .s7, .ritz .waffle .s8, .ritz .waffle .s9 {
+    text-align: center;
+    color: #000000;
+    font-family: Arial;
+    font-size: 10pt;
+    vertical-align: middle;
+    white-space: nowrap;
+    direction: ltr;
+    padding: 2px 3px;
+}
+
+/* 개별 스타일 클래스 */
+.ritz .waffle .s0 { border-bottom: 1px dotted #000; border-right: 1px dotted #000; background-color: #fff; }
+.ritz .waffle .s1 { border-bottom: 2px solid #666; border-right: 1px dotted #000; background-color: #fff; }
+.ritz .waffle .s2 { border-bottom: 1px dotted #000; border-right: 2px solid #999; background-color: #fff; }
+.ritz .waffle .s3 { border-bottom: 1px dotted #000; border-right: 2px solid #666; background-color: #fff; }
+.ritz .waffle .s4 { border-bottom: 2px solid #666; border-right: 2px solid #666; background-color: #d9ead3; }
+.ritz .waffle .s5 { border-bottom: 2px solid #999; border-right: 1px dotted #000; background-color: #fff; }
+.ritz .waffle .s6 { border-bottom: 2px solid #999; border-right: 2px solid #999; background-color: #fff; }
+.ritz .waffle .s7 { border-bottom: 2px solid #666; border-right: 2px solid #999; background-color: #fff; }
+.ritz .waffle .s8 { border-bottom: 2px solid #666; border-right: 2px solid #666; background-color: #45818e; color: white !important; }
+.ritz .waffle .s9 { border-bottom: 2px solid #999; border-right: 2px solid #666; background-color: #fff; }
+
+.grid-container { overflow: auto; }
+.waffle { border-collapse: collapse; margin: 0 auto; }

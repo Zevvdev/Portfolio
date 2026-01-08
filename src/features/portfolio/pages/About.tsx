@@ -2,9 +2,9 @@
 
 
 import SkillItem from "../components/SkillItem";
-import { profileInfo } from "../data/profile";
-import { skills } from "../data/skills";
-import "../styles/about.css";
+import { profileInfo } from "../types/profile";
+import { skills } from "../types/skills";
+import "../css/about.css";
 
 
 

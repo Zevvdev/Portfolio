@@ -1,0 +1,111 @@
+/* src/features/mandalart/css/mandalart.css */
+
+/* 만다라트 전체 그리드 컨테이너 (MandalartGrid에서 사용) */
+.mandalart-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  aspect-ratio: 1 / 1;
+  gap: 1px;       /* 칸 사이의 구분선 */
+  background-color: #A9B09F;    /* 구분선 색상 */
+  border: 1px solid #838f779f;  /* 외부 테두리 */
+  width: 95%;
+  max-width: 720px; /* 너무 커지지 않게 */
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* 개별 셀 기본 스타일 */
+.mandalart-cell {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  border: 0.5px solid #A9B09F;
+}
+
+/* 3x3 블럭 간 구분선 */
+/* 세로 굵은 선: 3번째, 6번째 열 오른쪽에 border 추가 */
+.mandalart-cell:nth-child(3n):not(:nth-child(9n)) {
+  border-right: 3px solid #838F77 !important;
+}
+
+/* 가로 굵은 선: 19~27번 셀 하단, 46~54번 셀 하단 */
+.mandalart-cell:nth-child(n+19):nth-child(-n+27),
+.mandalart-cell:nth-child(n+46):nth-child(-n+54) {
+  border-bottom: 3px solid #838F77 !important;
+}
+
+
+
+/* 텍스트 입력창 스타일 */
+.cell-textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px 5px;  
+  text-align: center;
+  font-size: min(2.5vw, 12px);
+  line-height: 1.2;
+  outline: none;
+  resize: none;
+  cursor: text;
+
+  /* 자동 줄바꿈 및 중앙 정렬 */
+  display: block;
+  align-items: center;
+  justify-content: center;
+  word-break: break-all;  /* 강제 줄바꿈 */
+  white-space: pre-wrap;    /* 줄바꿈 */
+  overflow: hidden;
+}
+
+
+
+
+/* 선택된 칸 textarea 에 포커스 갔을 때 부모 div 스타일 변경*/
+.mandalart-cell:focus-within {
+  z-index: 10;
+  outline: 3px solid #4A5142 !important; /* 더 진한 색으로 강조 */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
+}
+
+
+
+/* --- 타입별 스타일 구분 --- */
+
+/* 1. 최상위 정중앙 목표 (Center) */
+.cell-type-center {
+  background-color: #838F77 !important; 
+}
+.cell-type-center .cell-textarea {
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff !important;  /* 어두운 배경엔 흰색 글자 */ 
+}
+
+/* 2. 각 3x3 블록의 중앙 목표 (Main) */
+.cell-type-main {
+  background-color: #B9C384 !important; 
+}
+.cell-type-main .cell-input {
+  font-weight: bold;
+  color: #2F3627;
+}
+
+/* 3. 일반 세부 계획 (Normal) */
+.cell-type-normal {
+  background-color: #ECF1E6;
+}
+.cell-type-normal .cell-textarea {
+  color: #4A5142;
+}
+
+/* 마우스 호버 효과 */
+.mandalart-cell:hover {
+  background-color: #f0f4eb;
+}
